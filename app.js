@@ -1,25 +1,15 @@
 // import functions and grab DOM elements
-import { renderFalls } from "./util";
-import { findById } from "./util";
+import { renderFalls } from "./util.js";
+import { findById } from "./util.js";
+import { waterFalls } from "./data.js";
 
-
-const multnomahEl = document.getElementById('multnomah');
-const multnomahPic = document.getElementById('multnomahPic');
 
 // let state
 
-falls = 0,
 
-let waterFalls = [
-  {name: 'Multnomah falls',
-  id: 'Multnomah tribe',
-  picture: src='./assets/multFalls.jpeg'
-  height: '167ft',
-  distance: '1 hour',
-  },
-];
-
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const water = document.getElementById('water');
+for (let falls of waterFalls) {
+    const li = renderFalls(falls);
+    water.append(li);
+    
+}
