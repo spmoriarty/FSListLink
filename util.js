@@ -7,6 +7,13 @@ export function renderFalls(waterFalls) {
     p.textContent = `${waterFalls.name} is ${waterFalls.height} tall and is ${waterFalls.distance} from Portland Oregon`;
     const img = `${waterFalls.picture}`,
 
-    div.append(p, img);
+    const origin = document.createElement('p'),
+    origin.textContent = `These falls were given the name by ${waterFalls.id}.`,
+
+    div.append(p, img, origin);
     return div;
-}
+};
+
+export function findById(id, data) {
+    return data.find((item) => item.id ===id);
+};

@@ -1,5 +1,8 @@
 // import functions and grab DOM elements
-// import { renderFalls } from U
+import { renderFalls } from "./util";
+import { findById } from "./util";
+
+
 const multnomahEl = document.getElementById('multnomah');
 const multnomahPic = document.getElementById('multnomahPic');
 
@@ -9,7 +12,7 @@ falls = 0,
 
 let waterFalls = [
   {name: 'Multnomah falls',
-  id: 1,
+  id: 'Multnomah tribe',
   picture: src='./assets/multFalls.jpeg'
   height: '167ft',
   distance: '1 hour',
