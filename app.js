@@ -10,7 +10,7 @@ falls = 0,
 let waterFalls = [
   {name: 'Multnomah falls',
   id: 1,
-  picture: src,
+  picture: src='./assets/multFalls.jpeg'
   height: '167ft',
   distance: '1 hour',
   },
