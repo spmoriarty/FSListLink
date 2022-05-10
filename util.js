@@ -8,7 +8,8 @@ export function renderFalls(waterFalls) { // create header el, insert header tex
     const div = document.createElement('div');
     div.classList.add('displayFalls');
     const a = document.createElement('a');
-    a.href = `./falls.js/?=id=${waterFalls.name}`;
+    a.href = `./falls/?id=${waterFalls.name}`;
+
     
     const p = document.createElement('p');
     p.textContent = `${waterFalls.name} is ${waterFalls.height} tall and is ${waterFalls.distance} from Portland Oregon`;
@@ -20,7 +21,7 @@ export function renderFalls(waterFalls) { // create header el, insert header tex
     origin.textContent = `These falls were given the name by the ${waterFalls.id}.`;
 // append header and image in my order
     a.append(imgEl);
-    div.append(a,);
+    div.append(a, h1, p);
     return div;
 }
 
