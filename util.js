@@ -8,7 +8,7 @@ export function renderFalls(waterFalls) {
     const img = `${waterFalls.picture}`,
 
     const origin = document.createElement('p'),
-    origin.textContent = `These falls were given the name by ${waterFalls.id}.`,
+    origin.textContent = `These falls were given the name by the ${waterFalls.id}.`,
 
     div.append(p, img, origin);
     return div;
