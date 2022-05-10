@@ -1,6 +1,19 @@
 // import functions and grab DOM elements
+// import { renderFalls } from U
+const multnomah = document.getElementById('multnomah');
+const multnomahPic = document.getElementById('multnomahPic');
 
 // let state
+
+falls = 0,
+
+const waterFalls = [
+  name: 'Multnomah falls',
+  id: 1,
+  picture: src,
+  height: '167ft',
+  distance: '1 hour',
+]
 
 // set event listeners 
   // get user input
