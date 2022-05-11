@@ -16,12 +16,11 @@ const falls = findById(params.get('id'), waterFalls);
 
 
 const water = document.getElementById('water');
-for (let falls of waterFalls) {
-    const li = renderFalls(falls);
+for (let fall of waterFalls) {
+    const li = renderFalls(fall);
     water.append(li);
    
     
 }
-renderFalls(falls);
-    
+
     

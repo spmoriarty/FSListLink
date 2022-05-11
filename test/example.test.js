@@ -6,15 +6,15 @@ const test = QUnit.test;
 test('time to test a function', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = <div id="multnomah"><img id="multnomahPic" src="XXX"/><h3>Multnomah Falls</h3><p>Location: 1 hour from Portland Oregon</p></div>;
+    const expected = <a href="./falls/?id=Multnomah falls"><li></li><img src="../assets/multFalls.jpeg"/></a>;
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderFalls(){
-        
+    const actual = 
+
     };
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.equal(actual, expected)= <a href="./falls/?id=Multnomah falls"><li></li><img src="../assets/multFalls.jpeg"/></a>;
 });

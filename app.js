@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
-import { renderFalls } from './util.js';
-import { findById } from './util.js';
+
+
 import { waterFalls } from './data.js';
 
 
@@ -14,8 +14,9 @@ for (let fall of waterFalls) {
     a.href = `./falls/?id=${fall.name}`;
 
     const li = document.createElement('li');
-    li.textContent = fall.picture;
-    a.append(li);
+    const imgEl = document.createElement('img');
+    imgEl.src = `${fall.picture}`;
+    a.append(li, imgEl);
     water.append(a);
     
 }
