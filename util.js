@@ -29,5 +29,6 @@ export function renderFalls(waterFalls) { // create header el, insert header tex
 
 
 export function findById(id, data) {
-    return data.find((item) => item.id === id);
+    console.log(id);
+    return data.find((item) => item.name === id);
 }

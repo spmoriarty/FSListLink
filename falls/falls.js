@@ -3,7 +3,8 @@ import { findById } from '../util.js';
 import { waterFalls } from '../data.js';
 
 const params = new URLSearchParams(window.location.search);
-const falls = findById(params.get('id'), waterFalls);
+const fall = findById(params.get('id'), waterFalls);
+console.log(fall);
 
 // const fallsDiv = document.createElement('div');
 // const main = document.getElementById('fall');
@@ -16,11 +17,14 @@ const falls = findById(params.get('id'), waterFalls);
 
 
 const water = document.getElementById('water');
-for (let fall of waterFalls) {
-    const li = renderFalls(fall);
-    water.append(li);
-   
+const p = document.createElement('p');
+p.textContent = fall.name;
+
+water.append(p);
+// for (let fall of waterFalls) {
+//     const li = renderFalls(fall);
+//     water.append(li);
     
-}
+// }
 
     
