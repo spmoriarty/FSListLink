@@ -1,1 +1,24 @@
 /* add home page styles here */
+
+#water {
+display: flex;
+flex-direction: row;
+text-align: center;
+align-items: left;
+
+
+
+
+
+}
+
+#water img {
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    margin: ;
+    
+    border: 10px solid aquamarine;
+    padding: 10px;
+}
+
