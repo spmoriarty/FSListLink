@@ -86,15 +86,7 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background: transparent;
     box-shadow: var(--shadow);
 }
 
-.water {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    justify-content: flex-end;
-    height: 30%;
-
-}

@@ -1,0 +1,9 @@
+body {
+    background: url(https://peakvisor.com/photo/Columbia-River-Gorge.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+img {
+    size-adjust: auto;
+}
