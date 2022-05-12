@@ -6,7 +6,7 @@ const test = QUnit.test;
 test.skip ('time to test a function', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = <a href="./falls/?id=Multnomah falls"><li></li><img src="../assets/multFalls.jpeg"/></a>;
+    const expected = 
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -16,5 +16,5 @@ test.skip ('time to test a function', (expect) => {
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected)= <a href="./falls/?id=Multnomah falls"><li></li><img src="../assets/multFalls.jpeg"/></a>;
+    expect.equal(actual, expected)= 
 }));
