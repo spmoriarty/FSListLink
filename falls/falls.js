@@ -1,10 +1,10 @@
-import { renderFalls } from '../util.js';
+
 import { findById } from '../util.js';
 import { waterFalls } from '../data.js';
 
 const params = new URLSearchParams(window.location.search);
 const fall = findById(params.get('id'), waterFalls);
-console.log(fall);
+
 
 // const fallsDiv = document.createElement('div');
 // const main = document.getElementById('fall');
@@ -20,7 +20,18 @@ const water = document.getElementById('water');
 const p = document.createElement('p');
 p.textContent = fall.name;
 
-water.append(p);
+
+const imgEl = document.createElement('img');
+imgEl.src = `${fall.picture}`;
+
+
+const info = document.createElement('p');
+info.textContent = `${fall.name} is ${fall.height} tall and is ${fall.distance} from Portland Oregon`;
+    
+
+water.append(p, imgEl, info);
+
+// may simplify app.js
 // for (let fall of waterFalls) {
 //     const li = renderFalls(fall);
 //     water.append(li);
