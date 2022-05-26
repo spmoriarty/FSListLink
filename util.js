@@ -2,14 +2,12 @@
 
 
 export function findById(id, data) {
-    console.log(id);
-    console.log(data);
-
+   
     return data.find((item) => item.id === id);
 }
 
 export function renderFalls(waterfalls) {
-    console.log(waterfalls);
+   
 
     const div = document.createElement('div');
     div.classList.add('displayFalls');
@@ -27,7 +25,7 @@ export function renderFalls(waterfalls) {
 }
 
 export function renderFall(water) {
-    console.log(water);
+    
     
     const div = document.createElement('div');
     
