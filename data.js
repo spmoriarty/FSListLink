@@ -1,4 +1,7 @@
 //create DATA file relocate
+
+//create a table called waterfalls, id needs new column (idT with Multnomah etc...)
+
 export const waterFalls = [
     { id: 'Multnomah tribe',
         name: 'Multnomah Falls',
@@ -9,7 +12,7 @@ export const waterFalls = [
 
     { id: 'Yakama tribe',
         name: 'Wahkeena Falls',
-        picture: '../assets/WahKeena.jpeg',
+        picture: '../assets/WahKeena.jpeg', //'wahkeena' --> temp literal with ../assets/${}.jpeg in frontend
         height: '242ft',
         distance: '35 minutes'
     },
