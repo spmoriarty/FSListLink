@@ -86,6 +86,7 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background: transparent;
     box-shadow: var(--shadow);
 }
+
