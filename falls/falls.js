@@ -1,41 +1,19 @@
 
+import { fetchFalls, fetchFall } from '../fetch-utils.js';
 import { findById } from '../util.js';
-import { waterFalls } from '../data.js';
+import { renderFall } from '../util.js';
+const displayEl = document.getElementById('displayFalls');
 
-const params = new URLSearchParams(window.location.search);
-const fall = findById(params.get('id'), waterFalls);
-
-
-// const fallsDiv = document.createElement('div');
-// const main = document.getElementById('fall');
-// const img = document.getElementById('displayFalls');
-// const info = document.getElementById('info');
-// console.log(falls);
-
-// main.textContent = `${falls.name}`;
-// img.src = `../assets/${falls.picture}.jpeg`;
-
-
-const water = document.getElementById('water');
-const p = document.createElement('p');
-p.textContent = fall.name;
-
-
-const imgEl = document.createElement('img');
-imgEl.src = `${fall.picture}`;
-
-
-const info = document.createElement('p');
-info.textContent = `${fall.name} is ${fall.height} tall and is ${fall.distance} from Portland Oregon`;
+async function loadFalls() {
+    const falls = await fetchFalls();
+    console.log(falls);
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    console.log(id);
+    const waterFall = await fetchFall(id);
+    console.log(waterFall);
     
-
-water.append(p, imgEl, info);
-
-// may simplify app.js
-// for (let fall of waterFalls) {
-//     const li = renderFalls(fall);
-//     water.append(li);
-    
-// }
-
-    
+    const water = renderFall(waterFall);
+    displayEl.append(water);
+}
+loadFalls();

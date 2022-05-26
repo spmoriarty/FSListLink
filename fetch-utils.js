@@ -10,29 +10,35 @@ export async function fetchFalls() {
     return response.data;
 }
 
-
-
-export function async renderFalls(wateFalls) { 
-    await fetchFalls();
-    const h1 = document.createElement('h1');
-    h1.textContent = `Welcome to ${waterfalls.name} !`;
-
-    const div = document.createElement('div');
-    div.classList.add('displayFalls');
-    const a = document.createElement('a');
-    a.href = `./falls/?id=${waterfalls.picture}`;
-
-    
-    const p = document.createElement('p');
-    p.textContent = `${waterFalls.name} is ${waterfalls.height} tall and is ${waterfalls.distance} from Portland Oregon`;
-    
-    const imgEl = document.createElement('img');
-    imgEl.src = `${waterfalls.picture}`;
-
-    const origin = document.createElement('p');
-    origin.textContent = `These falls were given the name by the ${waterfalls.id}.`;
-// append header and image in my order
-    a.append(imgEl);
-    div.append(a, h1, p);
-    return div;
+export async function fetchFall(id) {
+    const response = await client.from('waterfalls').select('*').match({ id: id }).single();
+    return response.data;
 }
+
+
+// export async function renderFalls(waterfalls) {
+//     await fetchFalls();
+
+//     const h1 = document.createElement('h1');
+//     h1.textContent = `Welcome to ${waterfalls.name} !`;
+
+//     const div = document.createElement('div');
+//     div.classList.add('displayFalls');
+//     const a = document.createElement('a');
+//     a.href = `./falls/?id=${waterfalls.picture}`;
+
+    
+//     const p = document.createElement('p');
+//     p.textContent = `${waterfalls.name} is ${waterfalls.height} tall and is ${waterfalls.distance} from Portland Oregon`;
+    
+//     const imgEl = document.createElement('img');
+//     imgEl.src = `../assets/${waterfalls.picture}.jpeg`;
+
+//     const origin = document.createElement('p');
+//     origin.textContent = `These falls were given the name by the ${waterfalls.id}.`;
+// // append header and image in my order
+//     a.append(imgEl);
+//     div.append(a, h1, p);
+//     return div.data;
+// }
+
